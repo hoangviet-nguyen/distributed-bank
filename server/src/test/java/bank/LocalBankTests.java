@@ -15,11 +15,11 @@ import bank.exceptions.InactiveException;
 import bank.local.LocalBank;
 
 public class LocalBankTests {
-    private Bank bank;
+    private ClientBank bank;
 
     @BeforeEach
     void setup() throws Exception {
-        bank = new LocalBank();
+        bank = LocalBank.getLocalBank();
     }
 
     @AfterEach
