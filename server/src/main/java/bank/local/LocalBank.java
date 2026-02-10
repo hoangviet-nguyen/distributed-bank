@@ -10,10 +10,18 @@ import bank.Account;
 import bank.exceptions.InactiveException;
 import bank.exceptions.OverdrawException;
 
-public class LocalBank implements bank.Bank {
+public class LocalBank implements bank.ClientBank {
 
         private final Map<String, Account> accounts = new ConcurrentHashMap<>();
         private int numAccounts = 0;
+        private static LocalBank bank; 
+
+        private LocalBank() {}
+
+        public static LocalBank getLocalBank() {
+            if (bank == null) bank = new LocalBank();
+            return bank;
+        }
 
         @Override
         public Set<String> getAccountNumbers() throws IOException{
