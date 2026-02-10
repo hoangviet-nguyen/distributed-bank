@@ -19,7 +19,7 @@ import bank.exceptions.OverdrawException;
  * @author Dominik Gruntz
  * @version 3.0
  */
-public interface Bank {
+public interface ClientBank {
 
     /**
      * Creates a new account. As result, the method returns the account number of

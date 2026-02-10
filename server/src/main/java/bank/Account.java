@@ -14,7 +14,7 @@ import bank.exceptions.OverdrawException;
  * and withdraw money. The amounts are always given in Swiss Francs. References
  * to accounts can be obtained over a bank interface.
  * 
- * @see Bank
+ * @see ClientBank
  * @author Dominik Gruntz
  * @version 3.0
  */

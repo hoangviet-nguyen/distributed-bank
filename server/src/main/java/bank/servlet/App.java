@@ -10,11 +10,10 @@ import org.apache.catalina.webresources.DirResourceSet;
 import org.apache.catalina.webresources.StandardRoot;
 
 
-public class ServerBank {
+public class App {
     public static void main( String[] args ) throws Exception {
-        
         Tomcat tomcat = new Tomcat();
-        tomcat.setPort(8081);
+        tomcat.setPort(8080);
         tomcat.setBaseDir("target");
 
         String webAppDir = "src/main/webapp";;
