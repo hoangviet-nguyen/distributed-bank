@@ -9,6 +9,7 @@
 <body>
     
     <div class="container">
+
         <div class="container-table">
             <table>
                 <thead>
@@ -17,24 +18,45 @@
                     <th>Balance</th>
                 </thead>
                 <tbody id="accountEntries">
-                  <td>Dummy number</td>
-                  <td>Dummy name</td>
-                  <td>Dummy balance</td> 
                 </tbody>          
             </table>
         </div>
-
         
         <div>
-            <div class="container-input">
-                <input type="number" placeholder="Transfer from">
-                <input type="number" placeholder="Transfer to">
+            <div class="container-select">
+                <select id="selection" required>
+                    <option value="" disabled selected>Choose a technology</option>
+                    <option value="http">HTTP</option>
+                    <option value="rest">REST</option>
+                    <option value="graphql">Graphql</option>
+                </select>
             </div>
-            <div class="container-buttons">
-                <button id="deposit">Deposit</button>
-                <button id="withdraw">Withdraw</button>
-                <button id="transfer">Transfer</button>
+
+            <div class="container-test">
+                <button id="test">Test Implementation</button>
             </div>
+
+            <div class="container-transfer">
+                <div class="input">
+                    <input id="from" type="text" inputmode="numeric" pattern="[0-9]*" placeholder="Transfer from">
+                    <input id="to" type="text" inputmode="numeric" pattern="[0-9]*" placeholder="Transfer to">
+                </div>
+                <button id="transfer-button">Transfer</button>
+            </div>
+
+            <div class="container-accountCreation">
+                <input id="owner" type="text" placeholder="Owner">
+                <button id="createAccount">Create Account</button>
+            </div>
+
+            <div class="container-accountActions">
+                <input id="amount" placeholder="Amount">
+                <div class="buttons-accountActions">
+                    <button id="deposit">Deposit</button>
+                    <button id="withdraw">Withdraw</button>
+                </div>
+            </div>
+
         </div>
     </div>
 
