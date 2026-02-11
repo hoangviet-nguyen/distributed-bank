@@ -3,13 +3,14 @@
   "compilerOptions": {
     // File Layout
     "rootDir": "./src",
-    "outDir": "../ui/dist",
+    "outDir": "../ui/build",
 
     // Environment Settings
     // See also https://aka.ms/tsconfig/module
-    "module": "nodenext",
-    "target": "esnext",
-    "types": [],
+    "module": "esnext",
+    "target": "es2020",
+    "types": ["node"],
+    "moduleResolution": "bundler",
     // For nodejs:
     // "lib": ["esnext"],
     // "types": ["node"],
